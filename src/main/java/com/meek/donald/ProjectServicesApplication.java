@@ -16,16 +16,13 @@ public class ProjectServicesApplication {
 	    try {
             Configuration configuration = new Configuration();
             Properties props = new Properties();
-            props.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
+            props.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
             props.put(Environment.URL, 
-            		"jdbc:mysql://@127.0.0.1:3306/project?useSSL=false&amp;useUnicode=true&amp;" +
-            		"useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;" +
-            		"serverTimezone=UTC");
+            		"jdbc:mysql://@127.0.0.1:3304/project?useUnicode=true&amp;" +
+            		"serverTimezone=PDT");
             props.put(Environment.USER, "uname");
-            props.put(Environment.PASS, "g0odLuck*");
+            props.put(Environment.PASS, "H@veF&nC0dingN0w");
             props.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
-            props.put(Environment.SHOW_SQL, "true");
-            props.put(Environment.POOL_SIZE, "1");
             configuration.setProperties(props);
             configuration.addAnnotatedClass(Project.class);
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
